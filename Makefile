@@ -1,3 +1,6 @@
+PATH  := node_modules/.bin:$(PATH)
+SHELL := /bin/bash
+
 .PHONY: css
 css:
 	mkdir -p bundle

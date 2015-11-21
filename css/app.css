@@ -25,8 +25,6 @@ body, div, span, a, img, h1, h2, h3, h4, h5 {
 }
 
 body {
-  background-color: #F7F8FA;
-  /*background-color: #FFFFFF;*/
   color: #202020;
   font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
@@ -61,3 +59,334 @@ a {
   text-decoration: none;
 }
 */
+
+.site{
+  flex-direction:row;
+  background: #F7F8FA url(../img/bg.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+.site__main{
+  flex-basis:70%;
+  flex-direction:row;
+  background: linear-gradient(rgba(247,248,250,1),rgba(247,248,250,0));
+}
+.site__right-sidebar{
+  width:30%;
+  height: 100%;
+  flex-direction:column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.site__left-sidebar{
+  flex-basis:auto;
+  flex-grow:0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 170px;
+  padding: 50px 20px;
+}
+
+.site__left-sidebar h2{
+  font-size: 48px;
+  color:#515151;
+  font-family:"AvenirNext-DemiBold";
+  line-height: 68px;
+}
+
+.site__content{
+  flex-basis:0;
+  flex-grow:1;
+  margin-left: 170px;
+  margin-top: 10px;
+}
+.products{
+  flex-wrap:wrap;
+  flex-direction:row;
+}
+.product {
+  width: 50%;
+  padding: 15px;
+  margin-bottom: 40px;
+}
+.product__display{
+  padding: 20px;
+  border: 5px solid #D8D8D8;
+  background-color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+}
+.product__img{
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.product__add{
+  width: 60px;
+  height: 60px;
+  align-self:center;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+  flex-direction:column;
+  justify-content:center;
+  cursor: pointer;
+}
+
+.product__add:hover{
+  background-color: #78a3ca;
+}
+
+.product__price{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  font-family: "AvenirNext-Ultralight";
+  color: #202020;
+}
+
+.product__description{
+  flex-direction:row;
+}
+
+.product__name{
+  flex-basis:0;
+  flex-grow:1;
+  flex-wrap:wrap;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.product__heart{
+  width: 32px;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.product__heart:hover{
+  fill: #DE5E5E;
+}
+
+.cart{
+  flex-basis:0;
+  flex-grow:1;
+  overflow: scroll;
+  background-color: #C4CCDA;
+}
+
+.cart__title{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  padding: 0 20px;
+  z-index: 2;
+  background-image: linear-gradient(rgba(196,204,218,1),rgba(196,204,218,0.5));
+}
+
+.cart__content{
+  margin-top: 60px;
+  flex-basis:1;
+  overflow: hidden;
+}
+.cart-item {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.cart-item__top-part{
+  flex-direction:row;
+  align-items:stretch;
+}
+
+.cart-item__image{
+  flex-basis:33%;
+  border: 3px solid #D8D8D8;
+  background: #fff;
+  margin-bottom: 15px;
+}
+.cart-item__image img{
+  width: 100%;
+}
+
+.cart-item__top-part__middle{
+  flex-basis:0;
+  flex-grow:1;
+  align-self:center;
+  font-size: 18px;
+  color: #202020;
+  padding-left: 15px;
+}
+
+.cart-item__price {
+  font-family: "AvenirNext-Regular";
+}
+
+.cart-item__trash {
+  flex-basis: auto;
+  flex-grow: 0;
+}
+
+.cart-item__trash {
+  flex-basis: auto;
+  flex-grow: 0;
+}
+.cart-item__qty{
+  width: 33%;
+}
+
+.cart__overlay{
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  background-image: linear-gradient(rgba(196,202,218,0),rgba(196,202,218,1));
+}
+.adjust-qty{
+  width: 100%;
+  flex-direction:row;
+  align-item:center;
+  justify-content:center;
+}
+
+.adjust-qty__button{
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+  background: #F7F8FA;
+  color: #C4CCDA;
+  justify-content:center;
+  text-align: center;
+  align-item:center;
+  font-family: "AvenirNext-Regular";
+}
+.adjust-qty__number{
+  margin: 0 15px;
+}
+
+
+.checkout{
+  height: 320px;
+  padding: 0 20px;
+  background: linear-gradient(rgba(196,204,218,1),rgba(196,204,218,0));
+}
+
+
+.checkout__divider {
+  width: 50%;
+  border: none;
+  height: 1px;
+  background: #979707;
+}
+
+.checkout__coupon-input {
+  margin-top: 20px;
+  line-height: 35px;
+  padding: 0 8px;
+  font-size: 18px;
+  border: 3px solid #FF8A7A;
+}
+
+.error__message{
+  color: #DC1A00;
+  font-size: 18px;
+  margin: 5px 0;
+  font-family: "AvenirNext-DemiBold";
+}
+
+.checkout__content{
+  margin-top: 20px;
+}
+
+
+.checkout__detail{
+  flex-direction:row;
+  line-height: 24px;
+  margin-bottom: 10px;
+  justify-content:space-between;
+}
+
+.checkout__amount{
+  font-size: 24px;
+  color: #202020;
+  font-family: "AvenirNext-Regular";
+}
+
+.checkout__price--strikeout{
+  text-decoration: line-through
+}
+
+.checkout__price--saving{
+  color: red;
+  font-weight: 500;
+}
+
+.checkout__submit{
+  background: #80a590 url(../img/cart-icon.svg) no-repeat 20px center;
+  padding: 5px;
+  font-size: 22px;
+  font-family: "AvenirNext-DemiBold";
+  color: #f7f8fa;
+  border: 0;
+  height: 66px;
+}
+
+.site__right-sidebar-toggle {
+  /* 侧边栏隐藏时的样式 */
+  display: none;
+}
+
+@media(max-width:950px){
+  .site__right-sidebar{
+    width: 40%;
+  }
+  .site__main{
+    flex-basis:60%;
+  }
+  .product{
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px){
+  .site__right-sidebar{
+    width: 80%;
+    display: none;
+  }
+  .site__main{
+    flex-basis:100%;
+  }
+  .site__content{
+    margin-left: 0;
+  }
+  .site__left-sidebar{
+    display: none;
+  }
+  .site__right-sidebar-toggle {
+    display: flex;
+    justify-content:center;
+    position: absolute;
+    min-width: 60px;
+    width: 20%;
+    height: 50px;
+    background: #4a4a4a;
+    right: 20px;
+    bottom:0;
+    opacity:1;
+    z-index: 300;
+  }
+
+  body.js-show-right-sidebar .site__right-sidebar-toggle {
+    left: 0px;
+    width: 20%;
+  }
+  
+  body.js-show-right-sidebar .site__right-sidebar {
+    /* 侧边栏显示时的样式 */
+    display: block;
+  }
+}
